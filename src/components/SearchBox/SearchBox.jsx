@@ -1,4 +1,4 @@
-import css from "./SearchBox.module.css";
+import css from './SearchBox.module.css';
 
 function SearchBox({ value, handleFilter }) {
   return (
@@ -7,8 +7,7 @@ function SearchBox({ value, handleFilter }) {
       <input
         className={css.searchBar}
         type="text"
-        name="searchBar"
-        placeholder="type..."
+        placeholder="Type..."
         value={value}
         onChange={handleFilter}
       />

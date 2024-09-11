@@ -1,22 +1,22 @@
-import { Formik, Form, Field, ErrorMessage } from "formik";
-import * as Yup from "yup";
-import css from "./ContactForm.module.css";
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import * as Yup from 'yup';
+import css from './ContactForm.module.css';
 
 function ContactForm({ handleSubmit }) {
   const initialValues = {
-    name: "",
-    number: "",
+    name: '',
+    number: '',
   };
 
   const validationParams = Yup.object().shape({
     name: Yup.string()
-      .min(3, "Too Short!")
-      .max(50, "Too Long!")
-      .required("Required"),
+      .min(3, 'Too Short!')
+      .max(50, 'Too Long!')
+      .required('Required'),
     number: Yup.string()
-      .min(3, "Too Short!")
-      .max(50, "Too Long!")
-      .required("Required"),
+      .min(3, 'Too Short!')
+      .max(50, 'Too Long!')
+      .required('Required'),
   });
 
   return (
@@ -35,11 +35,7 @@ function ContactForm({ handleSubmit }) {
         <label className={css.wrapper}>
           <span className={css.label}>Number</span>
           <Field className={css.input} type="tel" name="number" />
-          <ErrorMessage
-            className={css.message}
-            name="number"
-            component="span"
-          />
+          <ErrorMessage className={css.message} name="number" component="span" />
         </label>
 
         <button className={css.addContactBtn} type="submit">

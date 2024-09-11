@@ -1,19 +1,44 @@
 .contactWrapper {
-  border: 1px solid black;
+  border: 1px solid #333;
   border-radius: 8px;
   padding: 18px;
   position: relative;
   min-width: 348px;
+  background-color: #1a1a1a;
+  text-align: center;
 }
+
 .wrapper {
   display: flex;
+  justify-content: center;
   gap: 12px;
   align-items: center;
 }
 
+.icon {
+  color: #646cff;
+  font-size: 1.5em;
+}
+
+.name,
+.number {
+  color: #ffffff;
+}
+
 .deleteBtn {
-  border: 1px solid grey;
+  border: 1px solid #888;
+  background-color: #333;
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
   position: absolute;
   top: 18px;
   right: 18px;
+}
+
+.deleteBtn:hover {
+  background-color: #444;
+  color: #f9f9f9;
 }
